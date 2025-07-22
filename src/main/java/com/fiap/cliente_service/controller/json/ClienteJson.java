@@ -5,13 +5,17 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 import java.time.LocalDate;
 
 @Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ClienteJson {
     @CPF
     private String cpf;
@@ -21,4 +25,6 @@ public class ClienteJson {
     private LocalDate dataNascimento;
     @NotBlank
     private String endereco;
+
+
 }

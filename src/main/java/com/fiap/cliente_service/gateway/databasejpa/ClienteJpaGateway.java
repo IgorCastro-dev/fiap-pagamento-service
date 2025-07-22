@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClienteJpaGateway implements ClienteGateway {
     @Autowired
-    private ClienteRepository clienteRepository;
+    ClienteRepository clienteRepository;
     @Override
     public Cliente criar(Cliente cliente) {
         clienteRepository.save(mapToEntity(cliente));
