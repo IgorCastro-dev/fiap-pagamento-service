@@ -1,4 +1,4 @@
-package com.fiap.cliente_service;
+package com.fiap.pagamento_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
