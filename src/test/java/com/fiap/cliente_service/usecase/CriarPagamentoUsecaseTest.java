@@ -14,7 +14,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.time.LocalDate;
 
 @ExtendWith(MockitoExtension.class)
-public class CriarClienteUsecaseTest {
+public class CriarPagamentoUsecaseTest {
     private Cliente cliente;
 
     @BeforeEach

@@ -1,4 +1,4 @@
-package com.fiap.cliente_service.controller.json;
+package com.fiap.pagamento_service.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -10,21 +10,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
+
+import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClienteJson {
-    @CPF
-    private String cpf;
-    @NotNull
-    @Past(message = "A data de nascimento deve ser no passado.")
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate dataNascimento;
-    @NotBlank
-    private String endereco;
-
-
+public class DadosPagamento {
+    private BigDecimal valor;
+    private String clienteCpf;
+    private String clienteCartao;
 }
